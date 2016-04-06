@@ -1,0 +1,5 @@
+rootProject.name = 'ametiste-lpp-lmdb'
+
+include 'lpp-lmdb'
+include 'lpp-lmdb-sdk'
+include 'lpp-lmdb-starter'

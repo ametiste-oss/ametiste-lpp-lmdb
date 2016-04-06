@@ -1,0 +1,35 @@
+plugins {
+    id "com.jfrog.bintray" version "1.3.1"
+}
+
+apply from: "https://raw.githubusercontent.com/ametiste-oss/ametiste-bintray-gradle/master/bintray.gradle"
+
+apply plugin: 'maven-publish'
+
+description = 'LMDB L-Platform Protocol'
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+            artifact sourcesJar {
+                classifier "sources"
+            }
+            artifact javadocJar {
+                classifier "javadoc"
+            }
+        }
+    }
+}
+
+dependencies {
+    compile project(":lpp-lmdb-sdk")
+
+    compile("org.ametiste.routine:ametiste-routine-core-spring:${ameRoutineVersion}")
+
+    compile("org.deephacks.lmdbjni:lmdbjni:${deephacksLmdbVersion}")
+    compile("org.deephacks.lmdbjni:lmdbjni-linux64:${deephacksLmdbVersion}")
+    compile("org.deephacks.lmdbjni:lmdbjni-osx64:${deephacksLmdbVersion}")
+
+    testCompile("junit:junit:${junitVersion}")
+}
