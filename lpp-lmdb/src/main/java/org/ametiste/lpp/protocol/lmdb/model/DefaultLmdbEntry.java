@@ -4,6 +4,7 @@ import org.ametiste.lpp.protocol.lmdb.entry.LmdbEntry;
 import org.fusesource.lmdbjni.Entry;
 
 /**
+ * Default implementation of {@link LmdbEntry}.
  *
  * @since 0.1.0
  */
@@ -13,9 +14,9 @@ public class DefaultLmdbEntry implements LmdbEntry {
     private final byte[] value;
 
     /**
+     * Create new {@code LmdbEntry} object from {@link Entry}.
      *
-     *
-     * @param entry
+     * @param entry initialized entry from Deephacks library.
      */
     public DefaultLmdbEntry(Entry entry) {
         notNull(entry, "'entry' must be initialized");
@@ -25,10 +26,10 @@ public class DefaultLmdbEntry implements LmdbEntry {
     }
 
     /**
+     * Create new {@code LmdbEntry} object from raw data.
      *
-     *
-     * @param key
-     * @param value
+     * @param key valid string.
+     * @param value initialized array.
      */
     public DefaultLmdbEntry(String key, byte[] value) {
         notNull(key, "'key' must be initialized");

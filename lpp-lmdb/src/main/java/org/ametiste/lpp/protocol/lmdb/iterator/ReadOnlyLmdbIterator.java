@@ -3,8 +3,13 @@ package org.ametiste.lpp.protocol.lmdb.iterator;
 import org.ametiste.lpp.protocol.lmdb.model.DefaultLmdbEntry;
 import org.fusesource.lmdbjni.*;
 
-import java.util.Optional;
-
+/**
+ * {@link LmdbIterator} implementation that provides read-only access to database data.
+ * <p>
+ * Iterator opens all required connection by itself and releases them on {@link #close()} operation.
+ *
+ * @since 0.1.0
+ */
 public class ReadOnlyLmdbIterator implements LmdbIterator {
 
     private final Env env;
@@ -12,10 +17,10 @@ public class ReadOnlyLmdbIterator implements LmdbIterator {
     private final EntryIterator iter;
 
     /**
+     * Create new instance of {@code ReadOnlyLmdbIterator}.
      *
-     *
-     * @param path
-     * @param key
+     * @param path lmdb database path. Must be valid directory.
+     * @param key starting point of iteration process. If {@code null} iteration starts from beginning of database.
      */
     public ReadOnlyLmdbIterator(String path, String key) {
         if (path == null) {

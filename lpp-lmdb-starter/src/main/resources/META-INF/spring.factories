@@ -1,3 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-    org.ametiste.lpp.protocol.config.LmdbProtocolComponentsConfiguration,\
     org.ametiste.lpp.protocol.lmdb.JniLmdbProtocol

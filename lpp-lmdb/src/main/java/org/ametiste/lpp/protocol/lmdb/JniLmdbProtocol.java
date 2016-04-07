@@ -8,7 +8,8 @@ import java.nio.file.Path;
 import java.util.function.Supplier;
 
 /**
- *
+ * {@code JniLmdbProtocol} is {@link LmdbProtocol} implementation that use Deephacks JNI library for communication
+ * with LMDB databases.
  *
  * @since 0.1.0
  */
