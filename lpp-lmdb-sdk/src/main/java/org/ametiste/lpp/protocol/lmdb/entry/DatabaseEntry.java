@@ -1,14 +1,16 @@
 package org.ametiste.lpp.protocol.lmdb.entry;
 
+import org.ametiste.lpp.protocol.lmdb.iterator.DatabaseIterator;
+
 /**
- * {@code LmdbEntry} provides interface to get data from LMDB database entry.
+ * {@code DatabaseEntry} provides interface to get data from LMDB database entry.
  *
  * @see org.ametiste.lpp.protocol.lmdb.LmdbProtocol
- * @see org.ametiste.lpp.protocol.lmdb.iterator.LmdbIterator
+ * @see DatabaseIterator
  *
  * @since 0.1.0
  */
-public interface LmdbEntry {
+public interface DatabaseEntry {
 
     /**
      * Get entry key.
