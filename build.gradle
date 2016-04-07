@@ -18,7 +18,7 @@ subprojects {
 
     ext {
         ameLaPlatformVersion = '0.0.1-b7'
-        ameRoutineVersion = '1.1.0-b2'
+        ameRoutineVersion = '1.1.0-b3'
         deephacksLmdbVersion = '0.4.6'
         junitVersion = '4.12'
 
