@@ -1,6 +1,6 @@
 package org.ametiste.lpp.protocol.lmdb;
 
-import org.ametiste.laplatform.protocol.Protocol;
+import org.ametiste.laplatform.sdk.protocol.Protocol;
 import org.ametiste.lpp.protocol.lmdb.iterator.DatabaseIterator;
 
 import java.nio.file.Path;

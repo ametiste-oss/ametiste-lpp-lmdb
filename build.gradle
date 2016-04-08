@@ -14,12 +14,12 @@ subprojects {
     targetCompatibility = 1.8
 
     group = 'org.ametiste.lpp'
-    version = '0.1.1-SNAPSHOT'
+    version = '0.1.0-SNAPSHOT'
 
     ext {
-        ameLaPlatformVersion = '0.0.1-b7'
+        ameLaPlatformVersion = '0.2.1'
         ameLmdbConnectorVersion = '0.1.0-RELEASE'
-        ameRoutineVersion = '1.1.0-b3'
+        ameRoutineVersion = '1.1.0-b4'
         junitVersion = '4.12'
 
         bintray_vcsUrl = 'https://github.com/ametiste-oss/ametiste-lpp-lmdb.git'

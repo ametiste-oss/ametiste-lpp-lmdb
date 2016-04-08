@@ -25,8 +25,6 @@ publishing {
 dependencies {
     compile project(":lpp-lmdb-sdk")
 
-    compile("org.ametiste.routine:ametiste-routine-core-spring:${ameRoutineVersion}")
+    compile("org.ametiste.lambda-platform:lambda-platform-dsl:${ameLaPlatformVersion}")
     compile("org.ametiste.lib:lmdb-connector-deephacks:${ameLmdbConnectorVersion}")
-
-    testCompile("junit:junit:${junitVersion}")
 }

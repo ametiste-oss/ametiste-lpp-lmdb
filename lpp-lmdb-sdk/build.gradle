@@ -23,5 +23,5 @@ publishing {
 }
 
 dependencies {
-    compile("org.ametiste.lambda-platform:lambda-platform-pgw:${ameLaPlatformVersion}")
+    compile("org.ametiste.lambda-platform:lambda-platform-sdk:${ameLaPlatformVersion}")
 }

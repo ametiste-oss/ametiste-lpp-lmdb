@@ -1,9 +1,9 @@
 package org.ametiste.lpp.protocol.lmdb;
 
+import org.ametiste.laplatform.dsl.LambdaProtocol;
 import org.ametiste.lib.lmdb.LmdbConnector;
 import org.ametiste.lpp.protocol.lmdb.iterator.DatabaseIterator;
 import org.ametiste.lpp.protocol.lmdb.iterator.LmdbIteratorAdapter;
-import org.ametiste.routine.dsl.annotations.LambdaProtocol;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.nio.file.Path;
