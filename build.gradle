@@ -17,8 +17,8 @@ subprojects {
     version = '0.1.0-SNAPSHOT'
 
     ext {
-        ameLaPlatformVersion = '0.2.1'
-        ameLmdbConnectorVersion = '0.1.0-RELEASE'
+        ameLaPlatformVersion = '0.2.2'
+        ameLmdbConnectorVersion = '0.1.1-RELEASE'
         junitVersion = '4.12'
 
         bintray_vcsUrl = 'https://github.com/ametiste-oss/ametiste-lpp-lmdb.git'
@@ -28,6 +28,7 @@ subprojects {
         mavenLocal()
         mavenCentral()
         jcenter()
+        maven { url "https://dl.bintray.com/ametiste-oss/maven" }
     }
 
     task sourcesJar(type: Jar, dependsOn:classes) {

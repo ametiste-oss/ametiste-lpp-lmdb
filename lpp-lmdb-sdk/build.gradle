@@ -24,4 +24,5 @@ publishing {
 
 dependencies {
     compile("org.ametiste.lambda-platform:lambda-platform-sdk:${ameLaPlatformVersion}")
+    compile("org.ametiste.lib:lmdb-connector-api:${ameLmdbConnectorVersion}")
 }
