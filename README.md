@@ -25,7 +25,7 @@ dependencies {
 public class DummyTask {
 
     @Connect
-    private LmdbProtocol protocol;
+    private LmdbConnectorProtocol protocol;
 
     @TaskOperation
     public void printData(@OperationParameter("path") String path) {
