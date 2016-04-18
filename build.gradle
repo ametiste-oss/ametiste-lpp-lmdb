@@ -17,7 +17,7 @@ subprojects {
     version = '0.1.0-SNAPSHOT'
 
     ext {
-        ameLaPlatformVersion = '0.2.2'
+        ameLaPlatformVersion = '0.2.6'
         ameLmdbConnectorVersion = '0.1.1-RELEASE'
         junitVersion = '4.12'
 
