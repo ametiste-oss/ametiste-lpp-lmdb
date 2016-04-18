@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+    org.ametiste.lpp.protocol.lmdb.configuration.LmdbProtocolComponentsConfiguration,\
+    org.ametiste.lpp.protocol.lmdb.DefaultLmdbConnectorProtocol

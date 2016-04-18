@@ -1,0 +1,71 @@
+description = 'LMDB L-Platform Protocol Project'
+
+subprojects {
+
+    apply plugin: 'java'
+    apply plugin: 'maven'
+
+    apply from: "https://raw.githubusercontent.com/ametiste-oss/ametiste-bintray-gradle/master/bintray-ext-ame-oss.gradle"
+    apply from: "https://raw.githubusercontent.com/ametiste-oss/ametiste-bintray-gradle/master/bintray-ext.gradle"
+
+    apply plugin: 'maven-publish'
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    group = 'org.ametiste.lpp'
+    version = '0.1.0-SNAPSHOT'
+
+    ext {
+        ameLaPlatformVersion = '0.2.6'
+        ameLmdbConnectorVersion = '0.1.1-RELEASE'
+        junitVersion = '4.12'
+
+        bintray_vcsUrl = 'https://github.com/ametiste-oss/ametiste-lpp-lmdb.git'
+    }
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        jcenter()
+        maven { url "https://dl.bintray.com/ametiste-oss/maven" }
+    }
+
+    task sourcesJar(type: Jar, dependsOn:classes) {
+        classifier = 'sources'
+        from sourceSets.main.allSource
+    }
+
+    task javadocJar(type: Jar, dependsOn:javadoc) {
+        classifier = 'javadoc'
+        from javadoc.destinationDir
+    }
+
+    artifacts {
+        archives sourcesJar
+        archives javadocJar
+    }
+
+    test.outputs.upToDateWhen {false}
+    test.testLogging.showStandardStreams = true
+
+    test {
+        afterTest { desc, result ->
+            println "Executing test ${desc.name} [${desc.className}] with result: ${result.resultType}"
+        }
+    }
+
+    jar {
+        manifest.attributes['Implementation-Title'] = name
+        manifest.attributes['Implementation-Version'] = version
+        manifest.attributes['Implementation-Git-Revision'] = "unprovided"
+    }
+
+    configurations.all {
+        resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.12'
+}

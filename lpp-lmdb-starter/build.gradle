@@ -1,0 +1,21 @@
+plugins {
+    id "com.jfrog.bintray" version "1.3.1"
+}
+
+apply from: "https://raw.githubusercontent.com/ametiste-oss/ametiste-bintray-gradle/master/bintray.gradle"
+
+apply plugin: 'maven-publish'
+
+description = 'Spring Boot Starter for Ametiste LMDB Protocol'
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+}
+
+dependencies {
+    compile project(":lpp-lmdb")
+}
